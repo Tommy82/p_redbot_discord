@@ -1,0 +1,25 @@
+{
+    "author": [
+        "Matters86"
+    ],
+    "name": "StateV-API",
+    "install_msg": "Thanks for installing.",
+    "description": "StateV-API Connecter.",
+    "short": "StateV API Verbindung.",
+    "hidden": false,
+    "min_bot_version": "3.5.3",
+    "tags": [
+        "StateV-API"
+    ],
+    "permissions": [
+        "embed_links"
+    ],
+    "requirements": ["emoji"],
+    "min_python_version": [
+        3,
+        9,
+        0
+    ],
+    "end_user_data_statement": "This cog records messages sent and Discord IDs for the purpose of earning achievements.",
+    "type": "COG"
+}

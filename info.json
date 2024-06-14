@@ -1,0 +1,8 @@
+{
+  "author": ["zusammen-programmieren.de"],
+  "name": "Zusammen-Programmieren-Cogs",
+  "short": "Cogs für Red-DiscordBot V3.",
+  "description": "Cogs für Red-DiscordBot V3.",
+  "install_msg": "Danke.",
+  "tags": ["general", "utility", "fun"]
+}

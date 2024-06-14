@@ -1,0 +1,18 @@
+https://docs.aiohttp.org/en/stable/client_quickstart.html // AIO https
+
+https://api.statev.de/ API DOCU
+
+https://docs.discord.red/en/stable/cog_guides/dev.html#repl BOT DOCU
+
+
+https://github.com/ltzmax/maxcogs/blob/master/autopublisher/__init__.py Bespiel
+
+https://index.discord.red/     Community Cogs
+
+Docker: PhasecoreX/docker-red-discordbot
+-> Variables:
+    -> TOKEN: [AppToken]
+    -> PREFIX: [Prefix, maybe "." or "redbot"]
+
+Laden eines Github Bots:
+->
