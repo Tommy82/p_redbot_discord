@@ -21,5 +21,4 @@ class Tommybot(commands.Cog):
     @commands.command()
     async def hello(self, ctx):
         await ctx.send('Hello World!')
-        await ctx.send(await self.config.foo())
 
