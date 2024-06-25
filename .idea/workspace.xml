@@ -72,7 +72,7 @@
       <workItem from="1718567848268" duration="90000" />
       <workItem from="1718568095096" duration="3441000" />
       <workItem from="1718866501282" duration="23000" />
-      <workItem from="1719345416569" duration="1398000" />
+      <workItem from="1719345416569" duration="1627000" />
     </task>
     <task id="LOCAL-00001" summary="Testing - Hello">
       <option name="closed" value="true" />
@@ -130,13 +130,22 @@
       <option name="project" value="LOCAL" />
       <updated>1719346600037</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Testing - Config - AltV-key">
+      <option name="closed" value="true" />
+      <created>1719346856259</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719346856259</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Testing - Hello" />
     <MESSAGE value="Testing - Config" />
     <MESSAGE value="Testing - Config - AltV-key" />

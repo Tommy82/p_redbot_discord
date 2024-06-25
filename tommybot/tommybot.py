@@ -22,5 +22,5 @@ class Tommybot(commands.Cog):
 
     @commands.command()
     async def addkey(self, ctx, new_key):
-        await self.config.guild(ctx.guild).baz.set(new_key)
-        await ctx.send("Der neue Alt:V key wurde gesetzt")
+        await self.config.guild(ctx.guild)["baz"].set(new_key)
+        await ctx.send("Der neue Alt:V key wurde neu gesetzt")
