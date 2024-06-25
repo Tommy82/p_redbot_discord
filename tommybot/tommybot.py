@@ -11,9 +11,7 @@ class Tommybot(commands.Cog):
             force_registration=True,
         )
         default_guild = {
-            "manager": [],
-            "guessing_time": 60,
-            "voting_time": 60,
+            "altv_key": '',
         }
         self.config.register_guild(**default_guild)
         self.cache = {}
@@ -22,3 +20,8 @@ class Tommybot(commands.Cog):
     async def hello(self, ctx):
         await ctx.send('Hello World!')
 
+    @commands.command()
+    async def addkey(self, ctx, new_key):
+        guild_group = self.config.guild(ctx.guild)
+        guild_group.altv_key.set(new_key)
+        await ctx.send("Der neue Alt:V key wurde gesetzt")
