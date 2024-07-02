@@ -41,12 +41,12 @@ class Tommybot(commands.Cog):
     @commands.command()
     async def apitest(self, ctx):
         await ctx.send('Test-apitest.1')
-        bearer_token = self.config.guild(ctx.guild).altv_key()
+        bearer_token = await self.config.guild(ctx.guild).altv_key()
         #response = await self.callstatev(ctx, 'factory/list/')
         await ctx.send(bearer_token)
 
     async def callstatev(self, ctx, url):
-        bearer_token = self.config.guild(ctx.guild).altv_key()   # Lade altv_key
+        bearer_token = await self.config.guild(ctx.guild).altv_key()   # Lade altv_key
         headers = {"Authorization": f"Bearer {bearer_token}"}
         response = requests.get("https://api.statev.de/req/" + url, headers=headers)
         return response.json()
