@@ -2,6 +2,7 @@ from redbot.core import commands, Config
 from redbot.core.bot import Red
 import requests
 
+
 class Tommybot(commands.Cog):
 
     def __init__(self, bot: Red, *args, **kwargs) -> None:
@@ -36,4 +37,16 @@ class Tommybot(commands.Cog):
         await self.config.guild(ctx.guild).altv_key.set(new_key)    # Speichern des Keys in der Variable "altv_key"
         await ctx.send("Der neue Alt:V key wurde neu gesetzt")      # Rückmeldung an den User
 
+
+    @commands.command()
+    async def apitest(self, ctx):
+        await ctx.send('Test-apitest.1')
+        response = await self.call_statev(self, ctx, 'factory/list/')
+        await ctx.send(response)
+
+    async def call_statev(self, ctx, url):
+        bearer_token = self.config.guild(ctx.guild).altv_key.get    # Lade altv_key
+        headers = {"Authorization": f"Bearer {bearer_token}"}
+        response = requests.get("https://api.statev.de/req/" + url, headers=headers)
+        return response.json()
 
