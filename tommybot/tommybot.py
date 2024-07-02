@@ -45,7 +45,7 @@ class Tommybot(commands.Cog):
         await ctx.send(response)
 
     async def callstatev(self, ctx, url):
-        bearer_token = self.config.guild(ctx.guild).altv_key.get    # Lade altv_key
+        bearer_token = self.config.guild(ctx.guild).altv_key   # Lade altv_key
         headers = {"Authorization": f"Bearer {bearer_token}"}
         response = requests.get("https://api.statev.de/req/" + url, headers=headers)
         return response.json()
