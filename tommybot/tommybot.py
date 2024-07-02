@@ -39,12 +39,21 @@ class Tommybot(commands.Cog):
 
 
     @commands.command()
-    async def apitest(self, ctx):
+    async def factories(self, ctx):
         response = await self.getfactories(ctx)
         await ctx.send(response)
 
+    @commands.command()
+    async def inventory(self, ctx, factoryid):
+        response = await self.getinventory(ctx, factoryid)
+        await ctx.send(response)
+
+    # Laden der Firmen
     async def getfactories(self, ctx):
         return await self.callstatev(ctx, 'factory/list/')
+
+    async def getinventory(self, ctx, factoryid):
+        return await self.callstatev(ctx, 'factory/inventory/' + factoryid)
 
     async def callstatev(self, ctx, url):
         bearer_token = await self.config.guild(ctx.guild).statevkey()   # Lade altv_key
