@@ -19,7 +19,7 @@ class Tommybot(commands.Cog):
 
         # Setzen der Server - Config (Wird für jeden Server neu erstellt)
         default_guild = {
-            "altv_key": '--none--',
+            "statevkey": '--none--',
         }
         self.config.register_guild(**default_guild)
 
@@ -34,19 +34,19 @@ class Tommybot(commands.Cog):
     # ToDo: Rechteverwaltung einfügen
     @commands.command()
     async def addkey(self, ctx, new_key):
-        await self.config.guild(ctx.guild).altv_key.set(new_key)    # Speichern des Keys in der Variable "altv_key"
-        await ctx.send("Der neue Alt:V key wurde neu gesetzt")      # Rückmeldung an den User
+        await self.config.guild(ctx.guild).statevkey.set(new_key)    # Speichern des Keys in der Variable "altv_key"
+        await ctx.send("Der neue State:V key wurde neu gesetzt")      # Rückmeldung an den User
 
 
     @commands.command()
     async def apitest(self, ctx):
         await ctx.send('Test-apitest.1')
-        bearer_token = await self.config.guild(ctx.guild).altv_key()
+        bearer_token = await self.config.guild(ctx.guild).statevkey()
         #response = await self.callstatev(ctx, 'factory/list/')
         await ctx.send(bearer_token)
 
     async def callstatev(self, ctx, url):
-        bearer_token = await self.config.guild(ctx.guild).altv_key()   # Lade altv_key
+        bearer_token = await self.config.guild(ctx.guild).statevkey()   # Lade altv_key
         headers = {"Authorization": f"Bearer {bearer_token}"}
         response = requests.get("https://api.statev.de/req/" + url, headers=headers)
         return response.json()
