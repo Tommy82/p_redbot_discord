@@ -39,6 +39,7 @@ class Tommybot(commands.Cog):
 
     @commands.command()
     async def apitest(self, ctx):
+        await ctx.send('Test-apitest.1')
         response = await self.call_statev(self, ctx, 'factory/list/')
         await ctx.send(response)
 

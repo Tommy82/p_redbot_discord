@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="646d58bf-6dda-4d92-bb86-a7c23a57bf37" name="Changes" comment="Testing - Config - AltV-key">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="646d58bf-6dda-4d92-bb86-a7c23a57bf37" name="Changes" comment="Testing - State API">
       <change beforePath="$PROJECT_DIR$/tommybot/tommybot.py" beforeDir="false" afterPath="$PROJECT_DIR$/tommybot/tommybot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +72,7 @@
       <workItem from="1718568095096" duration="3441000" />
       <workItem from="1718866501282" duration="23000" />
       <workItem from="1719345416569" duration="2264000" />
-      <workItem from="1719950407637" duration="1077000" />
+      <workItem from="1719950407637" duration="1226000" />
     </task>
     <task id="LOCAL-00001" summary="Testing - Hello">
       <option name="closed" value="true" />
@@ -163,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719347617403</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Testing - State API">
+      <option name="closed" value="true" />
+      <created>1719951516317</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1719951516317</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +181,7 @@
     <MESSAGE value="Testing - Hello" />
     <MESSAGE value="Testing - Config" />
     <MESSAGE value="Testing - Config - AltV-key" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing - Config - AltV-key" />
+    <MESSAGE value="Testing - State API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing - State API" />
   </component>
 </project>
