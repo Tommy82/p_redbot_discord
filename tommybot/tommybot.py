@@ -40,9 +40,11 @@ class Tommybot(commands.Cog):
 
     @commands.command()
     async def apitest(self, ctx):
-        await ctx.send('Test-apitest.1')
-        response = await self.callstatev(ctx, 'factory/list/')
+        response = await self.getfactories(ctx)
         await ctx.send(response)
+
+    async def getfactories(self, ctx):
+        return await self.callstatev(ctx, 'factory/list/')
 
     async def callstatev(self, ctx, url):
         bearer_token = await self.config.guild(ctx.guild).statevkey()   # Lade altv_key
