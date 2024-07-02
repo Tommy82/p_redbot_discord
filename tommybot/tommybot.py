@@ -1,5 +1,6 @@
 from redbot.core import commands, Config
 from redbot.core.bot import Red
+import requests
 
 class Tommybot(commands.Cog):
 
