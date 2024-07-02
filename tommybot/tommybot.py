@@ -52,12 +52,14 @@ class Tommybot(commands.Cog):
     async def getfactories(self, ctx):
         return await self.callstatev(ctx, 'factory/list/')
 
+    # Laden des Inventars für eine Firma
     async def getinventory(self, ctx, factoryid):
         return await self.callstatev(ctx, 'factory/inventory/' + factoryid)
 
+    # StateV - API Aufruf
     async def callstatev(self, ctx, url):
-        bearer_token = await self.config.guild(ctx.guild).statevkey()   # Lade altv_key
-        headers = {"Authorization": f"Bearer {bearer_token}"}
-        response = requests.get("https://api.statev.de/req/" + url, headers=headers)
-        return response.json()
+        bearer_token = await self.config.guild(ctx.guild).statevkey()                   # Lade altv_key
+        headers = {"Authorization": f"Bearer {bearer_token}"}                           # Setze Header - Authorisation
+        response = requests.get("https://api.statev.de/req/" + url, headers=headers)    # Führe Abfrage aus
+        return response.json()                                                          # Gebe Daten zurück
 
