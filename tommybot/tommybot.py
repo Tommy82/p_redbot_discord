@@ -53,8 +53,8 @@ class Tommybot(commands.Cog):
 
     # Laden der Firmen
     async def getfactories(self, ctx):
-        respJSON = await self.callstatev(ctx, 'factory/list/')
-        return json.loads(respJSON)
+        jsonResponse = await self.callstatev(ctx, 'factory/list/')
+        return json.load(jsonResponse)
 
     # Laden des Inventars für eine Firma
     async def getinventory(self, ctx, factoryid):
