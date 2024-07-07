@@ -74,7 +74,7 @@
       <workItem from="1718866501282" duration="23000" />
       <workItem from="1719345416569" duration="2264000" />
       <workItem from="1719950407637" duration="4299000" />
-      <workItem from="1720341698063" duration="1354000" />
+      <workItem from="1720341698063" duration="1418000" />
     </task>
     <task id="LOCAL-00001" summary="Testing - Hello">
       <option name="closed" value="true" />
@@ -316,11 +316,30 @@
       <option name="project" value="LOCAL" />
       <updated>1720342910804</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Testing - State API">
+      <option name="closed" value="true" />
+      <created>1720343065433</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1720343065434</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
