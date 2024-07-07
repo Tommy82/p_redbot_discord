@@ -43,7 +43,7 @@ class Tommybot(commands.Cog):
     @commands.command()
     async def factories(self, ctx):
         response = await self.getfactories(ctx)
-        await ctx.send(response)
+        await ctx.send(json.dumps(response))
 
     @commands.command()
     async def inventory(self, ctx, factoryid):
