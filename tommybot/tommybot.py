@@ -50,12 +50,6 @@ class Tommybot(commands.Cog):
         response = await self.getinventory(ctx, factoryid)
         await ctx.send(response)
 
-    @commands.command()
-    async def factoriesmenu(self, ctx):
-        factoriesJSON = await self.getfactories(ctx)
-
-
-        await ctx.send(response)
 
     # Laden der Firmen
     async def getfactories(self, ctx):
