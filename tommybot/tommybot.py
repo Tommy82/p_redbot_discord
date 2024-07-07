@@ -2,6 +2,7 @@ from redbot.core import commands, Config
 from redbot.core.bot import Red
 from redbot.core.utils import menus
 import requests
+import json
 
 
 class Tommybot(commands.Cog):
@@ -51,12 +52,15 @@ class Tommybot(commands.Cog):
 
     @commands.command()
     async def factoriesmenu(self, ctx):
-        response = await self.getfactories(ctx)
+        factoriesJSON = await self.getfactories(ctx)
+
+
         await ctx.send(response)
 
     # Laden der Firmen
     async def getfactories(self, ctx):
-        return await self.callstatev(ctx, 'factory/list/')
+        respJSON = await self.callstatev(ctx, 'factory/list/')
+        return json.loads(respJSON)
 
     # Laden des Inventars für eine Firma
     async def getinventory(self, ctx, factoryid):
